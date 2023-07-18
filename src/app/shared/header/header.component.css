@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+}
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: .8rem 1.2rem;
+    background-color: #12b070;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.top-redes, .top-contact {
+    display: none;
+}
+@media (min-width: 567px){
+    .top-redes, .top-contact {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+    }
+    .top-redes{
+        justify-content: flex-end;
+    }
+    .top-contact{
+        justify-content: flex-start;
+    }
+    .bi-topbar{
+        align-items: center;
+    }
+    .bi.bi-envelope.bi-topbar,
+    .bi.bi-telephone.bi-topbar{
+        margin-right: .4rem;
+    }
+}
+
+img {
+    max-width: 90%;
+    width: 100%;
+}
+.logo {
+    display: flex;
+    justify-content: space-between;
+    margin: .8rem 1.2rem;
+}
+.logo-candypets {
+    width: 6rem;
+}
+.nav-item {
+    list-style: none;
+}
+.nav-item-usuario {
+    list-style: none;
+}
+.carrito-de-compras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .8rem;
+}
+
+/*------------------------*/
+
+.nav-menu-horizontal{   
+    margin: auto;
+    background-color:rgb(33, 105, 43);
+    font-size: 20px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Muestra la lista del menú cuando el checkbox está marcado */
+.menu-toggle:checked ~ .menu-list {
+    display: block;
+}
+
+/* Oculta el input asociado al label que despliega el icono del menu hamburguesa */
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    display: none;
+}
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu-horizontal > li :hover{
+    background-color: rgb(33, 105, 43);
+}
+.menu-icon {
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: white;
+}
+@media ( min-width: 567px ) {
+    .menu-horizontal {
+        flex-direction: row;
+        display: flex;
+    }
+    .menu-icon {
+        display: none;
+    }
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+.menu-vertical li:hover{
+    background-color: rgb(174, 192, 180);
+}
+.menu-vertical li a{
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.navbar-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100vw;
+}
+@media (min-width: 567px){
+    .navbar-group{
+        display: none;
+    }
+ }
+.navbar-redes {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .8rem;
+}
+.bi-navbar {
+    color: white;
+    font-size: 1.7rem;
+}
+.bi-profile, .bi-topbar {
+    font-size: 1.7rem;
+    color: black;
+}
+/*-------------------------*/
+.slider-wrapper{
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 70vh;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden;
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 .25rem .5rem #21212126;
+    border-radius: 5rem;
+}
+.slider img{
+    flex: 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+
+}
+
+.container {
+    /* Mobile First */
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #083D77;
+  }
+
+@media only screen and ( min-width: 576px ) {
+    /* Dispositivos con un ancho mínimo de 576px, como los teléfonos móviles en posición horizontal */
+    .container {
+        max-width: 540px;                 /* -6.25% */
+       /* background-color: #EBEBD3;
+        color: #000000;*/
+    }
+}
+  
+@media only screen and ( min-width: 768px ) {
+    /* Tablets y dispositivos con un ancho mínimo de 768px, como el iPad en posición horizontal */
+    .container {
+        max-width: 720px;                 /* -6.25% */
+        /*background-color: #DA4167;
+        color: #FFFFFF;*/
+    }
+}
+  
+@media only screen and ( min-width: 992px ) {
+    /* Portátiles y dispositivos con un ancho mínimo de 992px */
+    .container {
+        max-width: 960px;                 /* -3.225% */
+        /*background-color: #F4D35E;
+        color: #000000;*/
+    }
+}
+  
+@media only screen and ( min-width: 1200px ) {
+    /* Pantallas de escritorio y dispositivos con un ancho mínimo de 1200px */
+    .container {
+        max-width: 1140px;                /* -5% */
+       /* background-color: #F78764;*/
+    }
+}
+  
+@media only screen and ( min-width: 1400px ) {
+    /* Pantallas más grandes y dispositivos con un ancho mínimo de 1400px */
+    .container {
+        max-width: 1320px;                /* -5.71 */
+        /*background-color: #083D77;
+        color: #FFFFFF;*/
+    }
+}
+  
+  @media only screen and ( min-width: 1600px ) {
+    /* Pantallas aún más grandes y dispositivos con un ancho mínimo de 1600px */
+    .container {
+      max-width: 1520px;                /* -5% */
+      /*background-color: #F78764;
+      color: #000000;*/
+    }
+  }
